@@ -1,6 +1,12 @@
 <?php
 	if(isset($_POST['submit'])) {
+		// MySQL creds
+		$servername = "localhost";
+		$username = "root";
+		$password = "MYSQL_ROOT_PASSWORD";
+		$dbname = "MYSQL_DATABASE";
 
+		// File Upload section
 		$target_dir = "db/";
 		$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 		$uploadOk = 1;
@@ -25,8 +31,26 @@
 				echo "Sorry, there was an error uploading your file.";
 			}
 		}
+		$file_url = "/db/" . basename($_FILES["fileToUpload"]["name"]);
 
+		// Connection to MySQL DB
+		$conn = new mysqli($servername, $username, $password, $dbname);
+		 // Check connection
+		if ($conn->connect_error) {
+			die("Connection Failed: " . $conn->connect_error);
+		}
 
+		$sql = "INSERT INTO documents (category, name, owner, data, url)
+		VALUES (" . $_POST['category'] . ", "  . $_POST['description'] . ", " . $_POST['owner'] . ", " . $_POST['date'] . ", " . $file_url . ")";
+
+		if ($conn->query($sql) === TRUE) {
+			echo "Inserimento completato";
+		} else {
+			echo "ERROR: " . $sql . "<br>" . $conn->error;
+		}
+
+		$conn->close();
+		//mysqli_close($conn);
 	}
 ?>
 
