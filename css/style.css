@@ -1,0 +1,12 @@
+header {
+  display: flex;
+  height: 100%;
+}
+
+.search {
+  padding: 20px;
+}
+
+h1 {
+  size: 42px;
+}
