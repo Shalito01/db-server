@@ -1,0 +1,46 @@
+@font-face {
+  font-family: Bebas-Neue;
+  src: url('../fonts/BebasNeue-Regular.ttf');
+}
+
+h3 {
+  font-family: Bebas-Neue;
+  color: #3500D3;
+}
+
+body {
+  display: grid;
+  background-color: #282828;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh;
+  place-items: center;
+}
+
+.container {
+  display: grid;
+  padding: 3rem;
+  border-radius: 10px;
+  background-color: #fff;
+  grid-template-columns: 1fr;
+}
+
+.fileUp {
+  margin-bottom: 2rem;
+}
+
+
+.send {
+  bottom: 0px;
+  justify-self: stretch;
+}
+
+.button {
+  padding: 1rem;
+  border-radius: 20px;
+  width: 100%;
+  font-size: large;
+  font-weight: bolder;
+  font-family: Bebas-Neue;
+  background-color: #240090;
+  color: #fff;
+}

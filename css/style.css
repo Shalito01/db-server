@@ -4,28 +4,63 @@
 }
 
 body{
+  height: 100%;
   position: relative;
   overflow: hidden;
 }
 
-header {
-  height: 100vh;
-  display: grid;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  grid-auto-rows: auto;
+.container {
+  display: grid;  
+  grid-template-columns: auto;
+  grid-template-rows: 65vh auto;
+  grid-template-areas: 
+    "header header"
+    "sel1 sel2";
+
+  place-items: center;
 }
+
+
 
 
 a {  
   font-family: Bebas-Neue;
   text-decoration: none;
   color: #000;
+  justify-self: stretch;
+}
+
+.search {
+  grid-area: sel1;
+}
+
+.up {
+  grid-area: sel2;
+}
+
+a h1{
+  text-align: center;
+}
+
+.sContainer {
+  height: 100%;
 }
 
 .descr {
   font-family: Bebas-Neue;
   color: #000;
   font-size: 72px;
+  grid-area: header;
+}
+
+
+
+
+/*  SEARCH PHP  */
+.sql {
+  visibility: hidden;
+  display: flex;
+  height: 5vh;
+  flex-direction: row;
+
 }
