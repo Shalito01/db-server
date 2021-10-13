@@ -44,3 +44,9 @@ body {
   background-color: #240090;
   color: #fff;
 }
+
+.retstr {
+  color: red;
+  font-weight: bold;
+  font-size: medium;
+}
