@@ -15,6 +15,14 @@ body {
   grid-template-rows: 100vh;
   place-items: center;
 }
+form div {
+  display: grid;
+}
+
+form div select,
+form div input {
+  justify-self: stretch;
+}
 
 .container {
   display: grid;

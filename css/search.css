@@ -1,3 +1,12 @@
+@font-face {
+  font-family: Bebas-Neue;
+  src: url('../fonts/BebasNeue-Regular.ttf');
+}
+
+h3 {
+  font-family: Bebas-Neue;
+  color: #3500D3;
+}
 
 .fquery {
   min-height: 20vh;
@@ -18,8 +27,17 @@ form {
   grid-template-columns: minmax(auto-fit, 1fr);
   grid-auto-flow: row;
   align-items: center;
-  justify-items: center;
+  justify-items: stretch;
   
+}
+
+form div {
+  display: grid;
+}
+
+form div select,
+form div input {
+  justify-self: stretch;
 }
 
 
