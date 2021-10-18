@@ -54,11 +54,11 @@
 	<div class="wrapper">
 		<div class="sql">
 			<div class="riga">
-				<div class="headings">CATEGORIA</div>
-				<div class="headings">NOME</div>
-				<div class="headings">OWNER</div>
-				<div class="headings">DATA</div>
-				<div class="headings">URL</div>
+				<div class="headings"><h3>CATEGORIA</h3></div>
+				<div class="headings"><h3>NOME</h3></div>
+				<div class="headings"><h3>OWNER</h3></div>
+				<div class="headings"><h3>DATA</h3></div>
+				<div class="headings"><h3>URL</h3></div>
 			</div>
 			
 			<?php
@@ -79,11 +79,11 @@
 				if ($result->num_rows > 0) {
 					echo '<div class="riga">';
 					while($row = mysqli_fetch_assoc($result)) {
-						echo '<div class="cella">' . $row['category'] . '</div>';
-						echo '<div class="cella">' . $row['name'] . '</div>';
-						echo '<div class="cella">' . $row['owner'] . '</div>';
-						echo '<div class="cella">' . $row['data'] . '</div>';
-						echo '<div class="cella">' . '<i class="fa fa-file-pdf-o" aria-hidden="true" href="' . $row['url'] . '"></i>' . '</div>';
+						echo '<div class="cella"><h4>' . $row['category'] . '</h4></div>';
+						echo '<div class="cella"><h4>' . $row['name'] . '</h4></div>';
+						echo '<div class="cella"><h4>' . $row['owner'] . '</h4></div>';
+						echo '<div class="cella"><h4>' . $row['data'] . '</h4></div>';
+						echo '<div class="cella">' . '<i class="fa fa-file-pdf-o icona" aria-hidden="true" href="' . $row['url'] . '"></i>' . '</div>';
 					}
 					echo '</div>';
 				}

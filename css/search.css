@@ -40,7 +40,25 @@ form div input {
   justify-self: stretch;
 }
 
+.sql {
+  display: grid;
+  grid-auto-flow: column;
+}
 
+.riga {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.headings, .cella {
+  display: grid;
+  padding: .5rem;
+}
+
+.headings h3, .cella h4, .icona{
+  place-self: center;
+}
 
 .button {
   padding: 1rem;
@@ -52,6 +70,8 @@ form div input {
   background-color: #240090;
   color: #fff;
 }
+
+
 
 @media screen and (min-width: 900px) {
   form {
@@ -65,5 +85,17 @@ form div input {
   .send {
     align-self: last baseline;
     height: 2rem;
+  }
+
+  .sql {
+    display: grid;
+    grid-auto-flow: row;
+  }
+  
+  .riga {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
   }
 }
