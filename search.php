@@ -61,7 +61,7 @@
 				die("Connection failed: " . $conn->connect_error);
 			}
 
-			$sql = "SELECT (category, name, owner, data, url) FROM documents";
+			$sql = "SELECT category, name, owner, data, url FROM documents WHERE category=" . $_POST['category'] . " AND owner=" . $_POST['owner'] . " AND name LIKE " . $_POST['description'] . " ORDER BY data";
 			$result = $conn->query($sql);
 
 			echo '<div class="riga"><div class="headings">CATEGORIA</div><div class="headings">NOME</div><div class="headings">OWNER</div><div class="headings">DATA</div><div class="headings">URL</div></div>' ;

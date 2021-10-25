@@ -87,9 +87,16 @@ form div input {
     height: 2rem;
   }
 
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr minmax(900px, 1920px) 1fr;
+    grid-template-areas: ". res .";
+  }
+
   .sql {
     display: grid;
     grid-auto-flow: row;
+    grid-area: res;
   }
   
   .riga {
