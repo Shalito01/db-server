@@ -4,12 +4,11 @@
 }
 
 .back-btn {
-  display: fixed;
+  position: fixed;
+  display: grid;
   top: 0;
   left: 0;
-  padding: 1.5rem;
   background-color: #282828;
-  color: #fff;
   font-size: 2rem;
   transition: all 0.5s linear;
   width: min-content;
@@ -17,9 +16,15 @@
   z-index: 999;
 }
 
-.back-btn i {
+.back-btn a {
+  display: grid;
+  justify-self: stretch;
+  place-items: center;
+  padding: 1.5rem;
+}
+
+.back-btn a i {
   color: #fff;
-  background-color: #fff;
 }
 
 .back-btn:hover {
@@ -28,6 +33,7 @@
 
 body {
   background-color: #282828;
+  margin: 0;
 }
 
 h3 {
