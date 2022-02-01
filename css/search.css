@@ -149,11 +149,13 @@ form div input {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
   }
   .riga-hd {
     display: grid;
     grid-auto-flow: column;
     height: min-content;
+    grid-template-rows: 1fr;
     grid-template-columns: repeat(5, 1fr);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
