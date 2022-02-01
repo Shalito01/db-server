@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div class="back-btn">
-		<i class="fas fa-angle-left"></i>
+		<a href="/index.html"><i class="fas fa-angle-left"></i></a>
 	</div>
   <div class="fquery">
     <form action="./search.php" method="post">

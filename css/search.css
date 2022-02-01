@@ -11,8 +11,8 @@
   background-color: #282828;
   font-size: 2rem;
   transition: all 0.5s linear;
-  width: min-content;
-  height: min-content;
+  width: 5vh;
+  height: 5vh;
   z-index: 999;
 }
 
@@ -20,7 +20,6 @@
   display: grid;
   justify-self: stretch;
   place-items: center;
-  padding: 1.5rem;
 }
 
 .back-btn a i {
