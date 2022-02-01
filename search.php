@@ -45,26 +45,33 @@
 
 			<br>
 
-			<input type="submit" value="Search" name="submit">
+			<input type="submit" class="button" value="Search" name="submit">
 
     </form>
 
+		<div class="sql">
+
 		<?php
 		require "./db/database.php";
-
-		echo '<div class="sql">';
-
 		if (isset($_POST['submit'])) {
 			$conn = new mysqli($servername, $username, $password, $dbname);
 
 			if ($conn->connect_error) {
 				die("Connection failed: " . $conn->connect_error);
 			}
+		?>
 
+		<div class="riga">
+			<div class="headings">CATEGORIA</div>
+			<div class="headings">NOME</div>
+			<div class="headings">OWNER</div>
+			<div class="headings">DATA</div>
+			<div class="headings">URL</div>
+		</div>
+		
+		<?php
 			$sql = "SELECT * FROM documents WHERE category=" . $_POST['category'] . " AND owner=" . $_POST['owner'] . " AND name LIKE " . $_POST['description'] . " ORDER BY data";
 			$result = $conn->query($sql);
-
-			echo '<div class="riga"><div class="headings">CATEGORIA</div><div class="headings">NOME</div><div class="headings">OWNER</div><div class="headings">DATA</div><div class="headings">URL</div></div>' ;
 			if ($result->num_rows > 0) {
 				echo '<div class="riga">';
 				while($row = mysqli_fetch_assoc($result)) {
@@ -78,9 +85,10 @@
 			}
 
 		}
-
-		echo "</div>";
 		?>
+
+		</div>
+
 
   </div>
 </body>
