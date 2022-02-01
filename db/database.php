@@ -1,6 +1,6 @@
 <?php
-$servername = "192.168.1.54";
-$username = "root";
-$password = "MYSQL_ROOT_PASSWORD";
-$dbname = "MYSQL_DATABASE";
+$servername = "127.0.0.1";
+$username = "dady";
+$password = "Neur4rk_dB_d4d4";
+$dbname = "neaurk";
 ?>

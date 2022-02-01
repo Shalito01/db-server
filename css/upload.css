@@ -1,18 +1,18 @@
 @font-face {
   font-family: Bebas-Neue;
-  src: url('../fonts/BebasNeue-Regular.ttf');
+  src: url("../fonts/BebasNeue-Regular.ttf");
 }
 
 h3 {
   font-family: Bebas-Neue;
-  color: #3500D3;
+  color: #3500d3;
 }
 
 body {
   display: grid;
   background-color: #282828;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh;
+  grid-template-rows: 0.5fr 1.5fr;
   place-items: center;
 }
 form div {
@@ -36,7 +36,6 @@ form div input {
   margin-bottom: 2rem;
 }
 
-
 .send {
   bottom: 0px;
   justify-self: stretch;
@@ -51,6 +50,7 @@ form div input {
   font-family: Bebas-Neue;
   background-color: #240090;
   color: #fff;
+  margin-top: 1rem;
 }
 
 .retstr {
