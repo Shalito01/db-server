@@ -4,7 +4,7 @@
 }
 
 .back-btn {
-  display: absolute;
+  display: fixed;
   top: 0;
   left: 0;
   padding: 1.5rem;
@@ -12,6 +12,13 @@
   color: #fff;
   font-size: 2rem;
   transition: all 0.5s linear;
+  width: min-content;
+  height: min-content;
+}
+
+.back-btn i {
+  color: #fff;
+  background-color: #fff;
 }
 
 .back-btn:hover {
