@@ -76,9 +76,9 @@
 				
 				if($_POST['owner'] != ""){
 					$sql = $sql . "owner='" . $_POST['owner'];
-				} else {
-					$sql = $sql . "descr LIKE '%" . $_POST['description'] . "%' ORDER BY data";
 				}
+				
+				$sql = $sql . "descr LIKE '%" . $_POST['description'] . "%' ORDER BY data";
 
 				$result = $conn->query($sql);
 				if ($result->num_rows > 0) {
