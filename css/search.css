@@ -53,6 +53,8 @@ form div input {
   display: grid;
   width: 100%;
   grid-auto-flow: column;
+  background-color: #fff;
+  border-radius: 1rem;
 }
 
 .riga {
