@@ -4,34 +4,64 @@
 }
 
 .back-btn {
-  position: fixed;
+  position: absolute;
   display: grid;
   top: 0;
   left: 0;
   background-color: #282828;
-  font-size: 2rem;
   transition: all 0.5s linear;
-  width: 10vh;
-  height: 10vh;
+  width: 45px;
+  height: 75px;
   z-index: 999;
 }
 
 .back-btn a {
   display: grid;
   justify-self: stretch;
-  place-items: center;
+  text-decoration: none;
+  text-emphasis: none;
 }
 
 .back-btn a i {
   color: #fff;
+  place-self: center;
 }
 
-.back-btn:hover {
+.back-btn:hover,
+.back-btn:focus {
   background-color: #240090;
 }
 
+.heading {
+  z-index: 1;
+  margin-top: 10px;
+  display: grid;
+  width: 100%;
+  place-items: center;
+  font-size: 48px;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 10px;
+  color: #000;
+  text-align: center;
+}
+
 body {
-  background-color: #282828;
+  background-image: linear-gradient(to left, #bdbbbe 0%, #9d9ea3 100%),
+    radial-gradient(
+      88% 271%,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(254, 254, 254, 0.25) 1%,
+      rgba(0, 0, 0, 0.25) 100%
+    ),
+    radial-gradient(
+      50% 100%,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  height: 100vh;
+  background-blend-mode: normal, lighten, soft-light;
   margin: 0;
 }
 
@@ -56,17 +86,7 @@ h4 {
   grid-template-areas: ". engine .";
   overflow: auto;
 
-  background: #757f9a; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #d7dde8,
-    #757f9a
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #d7dde8,
-    #757f9a
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 form {
@@ -95,7 +115,14 @@ form div input {
   height: min-content;
   grid-auto-flow: column;
   grid-template-rows: auto;
-  background-color: #fff;
+  background-image: linear-gradient(
+    to top,
+    #d5d4d0 0%,
+    #d5d4d0 1%,
+    #eeeeec 31%,
+    #efeeec 75%,
+    #e9e9e7 100%
+  );
 }
 
 .riga-hd {
@@ -107,17 +134,7 @@ form div input {
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 
-  background: #757f9a; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #d7dde8,
-    #757f9a
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #d7dde8,
-    #757f9a
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(10deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .riga {
@@ -148,6 +165,12 @@ form div input {
   font-family: Bebas-Neue;
   background-color: #240090;
   color: #fff;
+}
+
+@media screen and (min-width: 430px) {
+  .back-btn {
+    width: 75px;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -189,17 +212,5 @@ form div input {
     grid-template-columns: repeat(5, 1fr);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-
-    background: #757f9a; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #d7dde8,
-      #757f9a
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      #d7dde8,
-      #757f9a
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 }

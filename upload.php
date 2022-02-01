@@ -4,13 +4,18 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 	<link rel="stylesheet" href="./css/upload.css">
 	<title>Docs Uploader</title>
 </head>
 
 <body>
+	<div class="back-btn">
+		<a href="/index.html"><i class="fas fa-angle-left fa-lg"></i></a>
+	</div>
 	<div class="heading">
-		DOCS UPLOADER
+		NEAURK UPLOADER
 	</div>
 	<div class="container">
 		<form action="upload.php" method="post" enctype="multipart/form-data">
@@ -18,7 +23,7 @@
 			<div class="categoria">
 				<h3>Categoria: </h3>
 				<select name="category">
-					<option value="fatture">Fatture</option>
+					<option value="ricevute">Ricevute</option>
 					<option value="scuola">Scuola</option>
 					<option value="fisco">Finanze</option>
 					<option value="casa">Spese Casa</option>

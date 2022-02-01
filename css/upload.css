@@ -2,6 +2,47 @@
   font-family: Bebas-Neue;
   src: url("../fonts/BebasNeue-Regular.ttf");
 }
+.back-btn {
+  position: absolute;
+  display: grid;
+  top: 0;
+  left: 0;
+  background-color: #282828;
+  transition: all 0.5s linear;
+  width: 45px;
+  height: 15vh;
+  z-index: 999;
+}
+
+.back-btn a {
+  display: grid;
+  justify-self: stretch;
+  text-decoration: none;
+  text-emphasis: none;
+}
+
+.back-btn a i {
+  color: #fff;
+  place-self: center;
+}
+
+.back-btn:hover,
+.back-btn:focus {
+  background-color: #240090;
+}
+
+.heading {
+  z-index: 1;
+  display: grid;
+  justify-self: stretch;
+  place-items: center;
+  font-size: 48px;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #000;
+  text-align: center;
+}
 
 h3 {
   font-family: Bebas-Neue;
@@ -10,9 +51,15 @@ h3 {
 
 body {
   display: grid;
-  background-color: #282828;
+  background: #c9ccd3;
+  background-image: linear-gradient(
+    -180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  background-blend-mode: lighten;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 1.5fr;
+  grid-template-rows: 15vh 1fr;
   place-items: center;
 }
 form div {
@@ -57,4 +104,10 @@ form div input {
   color: red;
   font-weight: bold;
   font-size: medium;
+}
+
+@media screen and (min-width: 430px) {
+  .back-btn {
+    width: 75px;
+  }
 }
