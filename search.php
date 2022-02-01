@@ -36,6 +36,7 @@
 			<div class="proprietario">
 				<h3>Proprietario: </h3>
 				<select name="owner">
+					<option valute="" style="text-align:center"> -- </option>
 					<option value="naim">Naim Shala</option>
 					<option value="yllka">Yllka Shala</option>
 					<option value="klaus">Klaus Shala</option>
@@ -71,8 +72,13 @@
 					die("Connection failed: " . $conn->connect_error);
 				}
 				
-				$sql = "SELECT * FROM " . htmlspecialchars($_POST['category']) . " WHERE owner='" . $_POST['owner'] . "' AND descr LIKE '" . $_POST['description'] . "' ORDER BY data";
+				$sql = "SELECT * FROM " . htmlspecialchars($_POST['category']) . " WHERE ";
 				
+				if($_POST['owner'] != ""){
+					$sql = $sql . "owner='" . $_POST['owner'];
+				} else {
+					$sql = $sql . "descr LIKE '%" . $_POST['description'] . "%' ORDER BY data";
+				}
 
 				$result = $conn->query($sql);
 				if ($result->num_rows > 0) {
