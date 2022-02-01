@@ -17,6 +17,7 @@ h3 {
   grid-template-rows: 1fr;
   grid-template-areas: ". engine .";
   overflow: auto;
+  background-color: #282828;
 }
 
 form {
