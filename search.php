@@ -51,7 +51,7 @@
   </div>
 
 	<div class="sql">
-			<div class="riga">
+			<div class="riga-hd">
 				<div class="headings"><h3>CATEGORIA</h3></div>
 				<div class="headings"><h3>NOME</h3></div>
 				<div class="headings"><h3>OWNER</h3></div>
