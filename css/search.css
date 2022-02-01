@@ -64,6 +64,8 @@ form div input {
   grid-auto-flow: row;
   height: 20px;
   grid-template-rows: repeat(5, 1fr);
+
+  background-color: #fff;
 }
 
 .headings,
