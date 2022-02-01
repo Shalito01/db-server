@@ -62,10 +62,8 @@ form div input {
 .riga {
   display: grid;
   grid-auto-flow: row;
-  height: 20px;
+  height: min-content;
   grid-template-rows: repeat(5, 1fr);
-
-  background-color: #fff;
 }
 
 .headings,
