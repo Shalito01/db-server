@@ -43,8 +43,6 @@
 				<input type="date" name="date">
 			</div>
 
-			<br>
-
 			<input type="submit" class="button" value="Search" name="submit">
 
     </form>
