@@ -52,6 +52,7 @@ form div input {
 .sql {
   display: grid;
   width: 100%;
+  height: fit-content;
   grid-auto-flow: column;
   background-color: #fff;
   border-radius: 1rem;
