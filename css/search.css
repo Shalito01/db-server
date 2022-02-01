@@ -3,6 +3,21 @@
   src: url("../fonts/BebasNeue-Regular.ttf");
 }
 
+.back-btn {
+  display: absolute;
+  top: 0;
+  left: 0;
+  padding: 1.5rem;
+  background-color: #282828;
+  color: #fff;
+  font-size: 2rem;
+  transition: all 0.5s linear;
+}
+
+.back-btn:hover {
+  background-color: #240090;
+}
+
 body {
   background-color: #282828;
 }

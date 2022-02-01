@@ -9,6 +9,9 @@
   <title>DB Connect</title>
 </head>
 <body>
+	<div class="back-btn">
+		<i class="fas fa-angle-left"></i>
+	</div>
   <div class="fquery">
     <form action="./search.php" method="post">
 			<div class="categoria">
