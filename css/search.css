@@ -26,16 +26,28 @@ h4 {
   grid-template-rows: 1fr;
   grid-template-areas: ". engine .";
   overflow: auto;
-  background: #232526; /* fallback for old browsers */
+  /*background: #232526;
   background: -webkit-linear-gradient(
     to right,
     #414345,
     #232526
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to right,
     #414345,
     #232526
+  ); */
+
+  background: #757f9a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #d7dde8,
+    #757f9a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #d7dde8,
+    #757f9a
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
