@@ -48,48 +48,46 @@
 			<input type="submit" class="button" value="Search" name="submit">
 
     </form>
-
-		<div class="sql">
-
-		<?php
-		require "./db/database.php";
-		if (isset($_POST['submit'])) {
-			$conn = new mysqli($servername, $username, $password, $dbname);
-
-			if ($conn->connect_error) {
-				die("Connection failed: " . $conn->connect_error);
-			}
-		?>
-
-		<div class="riga">
-			<div class="headings">CATEGORIA</div>
-			<div class="headings">NOME</div>
-			<div class="headings">OWNER</div>
-			<div class="headings">DATA</div>
-			<div class="headings">URL</div>
-		</div>
-		
-		<?php
-			$sql = "SELECT * FROM documents WHERE category=" . $_POST['category'] . " AND owner=" . $_POST['owner'] . " AND name LIKE " . $_POST['description'] . " ORDER BY data";
-			$result = $conn->query($sql);
-			if ($result->num_rows > 0) {
-				echo '<div class="riga">';
-				while($row = mysqli_fetch_assoc($result)) {
-					echo '<div class="cella">' . $row['category'] . '</div>';
-					echo '<div class="cella">' . $row['name'] . '</div>';
-					echo '<div class="cella">' . $row['owner'] . '</div>';
-					echo '<div class="cella">' . $row['data'] . '</div>';
-					echo '<div class="cella">' . '<i class="fa fa-file-pdf-o" aria-hidden="true" href="' . $row['url'] . '"></i>' . '</div>';
-				}
-				echo '</div>';
-			}
-
-		}
-		?>
-
-		</div>
-
-
   </div>
+
+	<div class="sql">
+			<div class="riga">
+				<div class="headings"><h3>CATEGORIA</h3></div>
+				<div class="headings"><h3>NOME</h3></div>
+				<div class="headings"><h3>OWNER</h3></div>
+				<div class="headings"><h3>DATA</h3></div>
+				<div class="headings"><h3>URL</h3></div>
+			</div>
+
+			<?php
+			require "./db/database.php";
+			if (isset($_POST['submit'])) {
+				$conn = new mysqli($servername, $username, $password, $dbname);
+
+				if ($conn->connect_error) {
+					die("Connection failed: " . $conn->connect_error);
+				}
+				
+				$sql = "SELECT * FROM " . $_POST['category'] . " WHERE owner=" . $_POST['owner'] . " AND descr LIKE " . $_POST['description'] . " ORDER BY data";
+				$req = $conn->prepare($sql);
+				$req->bind_param('s', $_POST['category'], $_POST['owner'], $_POST['description']);
+				$req->execute();
+
+				$result = $req->get_result();
+				if ($result->num_rows > 0) {
+					echo '<div class="riga">';
+					while($row = mysqli_fetch_assoc($result)) {
+						echo '<div class="cella"><h4>' . htmlentities($row['category']) . '</h4></div>';
+						echo '<div class="cella"><h4>' . htmlentities($row['name']) . '</h4></div>';
+						echo '<div class="cella"><h4>' . htmlentities($row['owner']) . '</h4></div>';
+						echo '<div class="cella"><h4>' . htmlentities($row['data']) . '</h4></div>';
+						echo '<div class="cella">' . '<i class="fa fa-file-pdf-o" aria-hidden="true" href="' . htmlentities($row['url']) . '"></i>' . '</div>';
+					}
+					echo '</div>';
+				}
+
+			}
+			?>
+		</div>
 </body>
 </html>

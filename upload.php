@@ -95,8 +95,8 @@
 							die("Connection Failed: " . $conn->connect_error);
 						}
 
-						$sql = "INSERT INTO documents (category, name, owner, data, url)
-							VALUES (" . $_POST['category'] . ", "  . $_POST['description'] . ", " . $_POST['owner'] . ", " . $_POST['date'] . ", " . $file_url . ")";
+						$sql = "INSERT INTO " . $_POST['category'] . " (descr, owner, data, url)
+							VALUES (" . $_POST['description'] . ", " . $_POST['owner'] . ", " . $_POST['date'] . ", " . $file_url . ")";
 
 						if ($conn->query($sql) === TRUE) {
 							echo "Inserimento completato";
