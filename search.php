@@ -14,9 +14,9 @@
 			<div class="categoria">
 				<h3>Categoria: </h3>
 				<select name="category">
-					<option value="fatture">Fatture</option>
+					<option value="ricevute">Ricevute</option>
 					<option value="scuola">Scuola</option>
-					<option value="fisco">Finanze</option>
+					<option value="fisco">Banca</option>
 					<option value="casa">Spese Casa</option>
 					<option value="auto">Spese Auto</option>
 					<option value="multe">Mancati Pagamenti</option>
