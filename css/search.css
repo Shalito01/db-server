@@ -154,6 +154,14 @@ form div input {
 .cella h4,
 .icona {
   place-self: center;
+  color: #000;
+}
+
+.cella a {
+  display: grid;
+  justify-self: stretch;
+  text-decoration: none;
+  text-emphasis: none;
 }
 
 .button {

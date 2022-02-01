@@ -55,7 +55,7 @@
 
 	<div class="sql">
 			<div class="riga-hd">
-				<div class="headings"><h3>CATEGORIA</h3></div>
+				<div class="headings"><h3>ID</h3></div>
 				<div class="headings"><h3>NOME</h3></div>
 				<div class="headings"><h3>OWNER</h3></div>
 				<div class="headings"><h3>DATA</h3></div>
@@ -71,20 +71,18 @@
 					die("Connection failed: " . $conn->connect_error);
 				}
 				
-				$sql = "SELECT * FROM " . $_POST['category'] . " WHERE owner=" . $_POST['owner'] . " AND descr LIKE " . $_POST['description'] . " ORDER BY data";
-				$req = $conn->prepare($sql);
-				$req->bind_param('s', $_POST['category'], $_POST['owner'], $_POST['description']);
-				$req->execute();
+				$sql = "SELECT * FROM " . htmlspecialchars($_POST['category']) . " WHERE owner='" . $_POST['owner'] . "' AND descr LIKE '" . $_POST['description'] . "' ORDER BY data";
+				
 
-				$result = $req->get_result();
+				$result = $conn->query($sql);
 				if ($result->num_rows > 0) {
 					echo '<div class="riga">';
 					while($row = mysqli_fetch_assoc($result)) {
-						echo '<div class="cella"><h4>' . htmlentities($row['category']) . '</h4></div>';
-						echo '<div class="cella"><h4>' . htmlentities($row['name']) . '</h4></div>';
+						echo '<div class="cella"><h4>' . htmlentities($row['id']) . '</h4></div>';
+						echo '<div class="cella"><h4>' . htmlentities($row['descr']) . '</h4></div>';
 						echo '<div class="cella"><h4>' . htmlentities($row['owner']) . '</h4></div>';
 						echo '<div class="cella"><h4>' . htmlentities($row['data']) . '</h4></div>';
-						echo '<div class="cella">' . '<i class="fa fa-file-pdf-o" aria-hidden="true" href="' . htmlentities($row['url']) . '"></i>' . '</div>';
+						echo '<div class="cella"><a href="' . htmlentities($row['url']) . '"><i class="fas fa-file-pdf icona" aria-hidden="true"></i></a></div>';
 					}
 					echo '</div>';
 				}

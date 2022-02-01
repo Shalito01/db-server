@@ -101,7 +101,7 @@
 						}
 
 						$sql = "INSERT INTO " . $_POST['category'] . " (descr, owner, data, url)
-							VALUES (" . $_POST['description'] . ", " . $_POST['owner'] . ", " . $_POST['date'] . ", " . $file_url . ")";
+							VALUES ('" . $_POST['description'] . "', '" . $_POST['owner'] . "', '" . $_POST['date'] . "', '" . $file_url . "')";
 
 						if ($conn->query($sql) === TRUE) {
 							echo "Inserimento completato";
