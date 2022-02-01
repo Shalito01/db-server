@@ -11,8 +11,8 @@
   background-color: #282828;
   font-size: 2rem;
   transition: all 0.5s linear;
-  width: 5vh;
-  height: 5vh;
+  width: 15vh;
+  height: 15vh;
   z-index: 999;
 }
 
