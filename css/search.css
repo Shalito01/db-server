@@ -14,6 +14,7 @@
   transition: all 0.5s linear;
   width: min-content;
   height: min-content;
+  z-index: 999;
 }
 
 .back-btn i {
@@ -40,6 +41,7 @@ h4 {
 }
 
 .fquery {
+  z-index: 1;
   min-height: 20vh;
   position: relative;
   padding: 2rem 0;
