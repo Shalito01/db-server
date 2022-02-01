@@ -3,9 +3,18 @@
   src: url("../fonts/BebasNeue-Regular.ttf");
 }
 
+body {
+  background-color: #282828;
+}
+
 h3 {
   font-family: Bebas-Neue;
   color: #3500d3;
+}
+
+h4 {
+  font-family: Bebas-Neue;
+  color: #000;
 }
 
 .fquery {
