@@ -207,7 +207,6 @@ form div input {
   .wrapper {
     display: grid;
     grid-template-columns: 1fr minmax(900px, 1920px) 1fr;
-    grid-template-areas: ". res .";
   }
 
   .riga {
