@@ -36,7 +36,7 @@
 			<div class="proprietario">
 				<h3>Proprietario: </h3>
 				<select name="owner">
-					<option valute="" style="text-align:center"> -- </option>
+					<option value="" style="text-align:center"> -- </option>
 					<option value="naim">Naim Shala</option>
 					<option value="yllka">Yllka Shala</option>
 					<option value="klaus">Klaus Shala</option>
