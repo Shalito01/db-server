@@ -3,6 +3,17 @@
   src: url("../fonts/BebasNeue-Regular.ttf");
 }
 
+.wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: ". res .";
+}
+
+.container {
+  grid-area: res;
+  display: grid;
+}
+
 .back-btn {
   position: absolute;
   display: grid;
@@ -197,11 +208,6 @@ form div input {
     display: grid;
     grid-template-columns: 1fr minmax(900px, 1920px) 1fr;
     grid-template-areas: ". res .";
-  }
-
-  .container {
-    grid-area: res;
-    display: grid;
   }
 
   .riga {
