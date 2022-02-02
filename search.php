@@ -8,7 +8,7 @@
   <title>DB Connect</title>
 </head>
 <body>
-	
+
 	<div class="back-btn">
 		<a href="/index.html"><i class="fas fa-angle-left fa-lg"></i></a>
 	</div>
@@ -83,7 +83,7 @@
 							$sql = $sql . "owner='" . $_POST['owner'];
 						}
 						
-						$sql = $sql . "descr LIKE '%" . $_POST['description'] . "%' ORDER BY data";
+						$sql = $sql . "descr LIKE '%" . $_POST['description'] . "%' OR descr LIKE '%" . $_POST['description'] . "' OR descr LIKE '" . $_POST['description'] . "%' ORDER BY data";
 
 						$result = $conn->query($sql);
 						if ($result->num_rows > 0) {
