@@ -6,11 +6,11 @@
 .wrapper {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  grid-template-areas: ". res .";
+  grid-template-areas: ". cont .";
 }
 
 .container {
-  grid-area: res;
+  grid-area: cont;
   display: grid;
 }
 
