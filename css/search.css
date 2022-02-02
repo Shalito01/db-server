@@ -113,8 +113,7 @@ form div input {
   display: grid;
   width: 100%;
   height: min-content;
-  grid-auto-flow: column;
-  grid-template-rows: auto;
+  grid-auto-flow: row;
   background-image: linear-gradient(
     to top,
     #d5d4d0 0%,
@@ -139,9 +138,9 @@ form div input {
 
 .riga {
   display: grid;
-  grid-auto-flow: row;
-  height: min-content;
-  grid-template-rows: repeat(5, 1fr);
+  grid-auto-flow: column;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
 }
 
 .headings,
@@ -200,10 +199,9 @@ form div input {
     grid-template-areas: ". res .";
   }
 
-  .sql {
-    display: grid;
-    grid-auto-flow: row;
+  .container {
     grid-area: res;
+    display: grid;
   }
 
   .riga {
