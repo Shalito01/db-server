@@ -93,7 +93,7 @@
 								echo '<div class="cella"><h4>' . htmlentities($row['descr']) . '</h4></div>';
 								echo '<div class="cella"><h4>' . htmlentities($row['owner']) . '</h4></div>';
 								echo '<div class="cella"><h4>' . htmlentities($row['data']) . '</h4></div>';
-								echo '<div class="cella"><a href="' . htmlentities($row['url']) . '"><i class="fas fa-file-pdf icona" aria-hidden="true"></i></a></div>';
+								echo '<div class="cella"><a href="' . htmlentities($row['url']) . '" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf icona" aria-hidden="true"></i></a></div>';
 							}
 							echo '</div>';
 						}
