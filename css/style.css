@@ -1,44 +1,53 @@
 @font-face {
   font-family: Bebas-Neue;
-  src: url('../fonts/BebasNeue-Regular.ttf');
+  src: url("../fonts/BebasNeue-Regular.ttf");
 }
 
-body{
+body {
   height: 100%;
   position: relative;
   overflow: hidden;
+  background-color: #282828;
 }
 
 .container {
-  display: grid;  
+  display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 65vh auto;
-  grid-template-areas: 
+  grid-template-rows: 75vh auto;
+  grid-template-areas:
     "header header"
     "sel1 sel2";
 
   place-items: center;
 }
 
-
-
-
-a {  
+a {
   font-family: Bebas-Neue;
   text-decoration: none;
-  color: #000;
+  color: rgb(155, 202, 203);
   justify-self: stretch;
+  transform: skew(-30deg);
+}
+
+.sContainer {
+  transform: skew(30deg);
 }
 
 .search {
   grid-area: sel1;
+  background-image: linear-gradient(43deg, #0c0032, #3500d3);
+  margin-left: -30px;
+  margin-right: 10px;
 }
 
 .up {
   grid-area: sel2;
+  background-image: linear-gradient(43deg, #3500d3, #0c0032);
+  margin-left: 10px;
+  margin-right: -30px;
 }
 
-a h1{
+a h1 {
   text-align: center;
 }
 
@@ -48,13 +57,14 @@ a h1{
 
 .descr {
   font-family: Bebas-Neue;
+  height: 100%;
+  width: 100%;
   color: #000;
-  font-size: 72px;
+  background: url("../src/img/logo_transparent.png") no-repeat;
+  background-position: center;
+  background-size: contain;
   grid-area: header;
 }
-
-
-
 
 /*  SEARCH PHP  */
 .sql {
@@ -62,5 +72,4 @@ a h1{
   display: flex;
   height: 5vh;
   flex-direction: row;
-
 }
